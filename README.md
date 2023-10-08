@@ -96,7 +96,7 @@ Here are the main endpoints for each model:
 
 ## Acknowledgments
 
-We would like to express our gratitude to the following individuals and projects for their contributions and support to the Employee Address Application :
+We would like to express our gratitude to the following individuals and projects for their contributions and support to the Student Application :
 
 - **[Vishal Raj]**: Lead developer and project coordinator.
 - **[Mainak Ghosh]**: Contributor to the project, helping with [SpringBoot to complete this project].
