@@ -8,11 +8,13 @@ import org.hibernate.annotations.ManyToAny;
 
 import java.util.List;
 import java.util.Set;
-
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class,scope= Student.class,property="studentId")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,8 +35,8 @@ public class Student {
     @OneToMany(mappedBy = "student")
   private   Set<Book> bookSet;
 
-    @ManyToMany(mappedBy = "studentSet")
+    @ManyToMany(mappedBy = "studentSet",cascade = CascadeType.ALL)
 
-   private Set<Course> courseSet;
+   public Set<Course> courseSet;
 
 }
